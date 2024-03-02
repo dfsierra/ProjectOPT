@@ -1,5 +1,5 @@
  .u-section-1 {
-  background-image: url("images/wallpaperflare.com_wallpaper.jpg");
+  background-image: url("../images/wallpaperflare.com_wallpaper.jpg");
   background-position: 50% 50%;
 }
 
@@ -245,7 +245,7 @@
 .u-section-3 .u-image-1 {
   width: 213px;
   height: 213px;
-  background-image: url("images/jesus.jpg");
+  background-image: url("../images/jesus.jpg");
   background-position: 50% 50%;
   margin: 25px auto 0;
 }
@@ -274,7 +274,7 @@
 .u-section-3 .u-image-2 {
   width: 213px;
   height: 213px;
-  background-image: url("images/fernan.jpg");
+  background-image: url("../images/fernan.jpg");
   background-position: 50% 50%;
   margin: 25px auto 0;
 }
@@ -302,7 +302,7 @@
 .u-section-3 .u-image-3 {
   width: 213px;
   height: 213px;
-  background-image: url("images/j.jpg");
+  background-image: url("../images/j.jpg");
   background-position: 50% 0%;
   margin: 25px auto 0;
 }
@@ -331,7 +331,7 @@
 .u-section-3 .u-image-4 {
   width: 213px;
   height: 213px;
-  background-image: url("images/johan.jpg");
+  background-image: url("../images/johan.jpg");
   background-position: 50% 0%;
   margin: 25px auto 0;
 }
@@ -360,7 +360,7 @@
 .u-section-3 .u-image-5 {
   width: 213px;
   height: 213px;
-  background-image: url("images/daniel.jpg");
+  background-image: url("../images/daniel.jpg");
   background-position: 50% 0%;
   margin: 25px auto 0;
 }
@@ -388,7 +388,7 @@
 .u-section-3 .u-image-6 {
   width: 213px;
   height: 213px;
-  background-image: url("images/elkin.jpg");
+  background-image: url("../images/elkin.jpg");
   background-position: 50% 50%;
   margin: 25px auto 0;
 }
@@ -703,7 +703,7 @@
 }
 
 .u-section-4 .u-image-1 {
-  background-image: url("images/wallpaperflare.com_wallpaper1.jpg");
+  background-image: url("../images/wallpaperflare.com_wallpaper1.jpg");
   min-height: 520px;
   background-position: 50% 50%;
 }
@@ -891,7 +891,7 @@
 
 .u-section-6 .u-image-1 {
   min-height: 461px;
-  background-image: url("images/g1.png");
+  background-image: url("../images/g1.png");
   background-position: 50% 50%;
 }
 
