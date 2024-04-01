@@ -377,6 +377,94 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     </div>
   </section>
 
+  
+  <section class="u-clearfix u-section-12" id="sec-8a3b">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-1 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234; text-align: center;">MACHINE LEARNING MODEL SELECTION I</h2>
+        <div class="u-layout u-layout-horizontal u-layout-wrap u-layout-1">
+            <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                    <h3 class="u-text u-text-2 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">Estimation Objectives</h3>
+                    <ul class="u-text u-text-3">
+                        <li>The main objective of the analysis has been to develop a reliable predictive model estimating the quality of red wine based on its chemical properties. Wine quality, serving as the dependent variable, has been assessed and predicted through a set of quantifiable independent variables measured for each wine sample.</li>
+                        <li>The correlation matrix suggests that certain variables exert a greater influence on quality than others. Notably, a significant negative correlation between volatile acidity and quality indicates that wines with lower volatile acidity tend to exhibit better quality. Conversely, a moderate positive correlation between alcohol content and quality suggests that wines with higher alcohol content are better regarded.</li>
+                        <li>From these findings, specific objectives for the analysis have been established:</li>
+                        <ul>
+                            <li>Identify Significant Variables: Determine the independent variables demonstrating statistically significant relationships with wine quality, suitable for inclusion in the predictive model.</li>
+                            <li>Understand the Nature of Relationships: Investigate whether relationships between variables and wine quality are linear or suggest more complex patterns, potentially necessitating nonlinear models or new derived variables.</li>
+                            <li>Predictive Modeling: Utilize insights into variable relationships to construct a precise model capable of not only accurately predicting wine quality but also elucidating the influence of each chemical characteristic on quality perception.</li>
+                            <li>Rigorous Model Evaluation: Ensure the model's ability to generalize to new data, employing appropriate validation techniques to prevent overfitting.</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                    <h3 class="u-text u-text-4 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">Details About Our First Selected Model</h3>
+                    <div style="display: flex; justify-content: center;">
+                      <img src="static\images\im1.png" alt="Imagen 2">
+                    </div>
+                    <ul class="u-text u-text-5">
+                        <li>Logistic Regression coefficients are easily interpretable, allowing you to understand how each characteristic contributes to the classification of wine quality as "good" or "bad". This provides valuable insights into which characteristics are most important in determining wine quality.</li>
+                        <li>In terms of complexity, Logistic Regression is computationally efficient and can handle large data sets quickly and efficiently. This is beneficial when working with a large number of observations and characteristics.</li>
+                        <li>Since we have binarized the wine quality variable to convert the problem into a binary (good/bad) classification, Logistic Regression is a natural choice for this type of problem.</li>
+                        <li>Logistic Regression can use regularization techniques, such as L1 (Lasso) or L2 (Ridge) regularization, to avoid overfitting and improve the generalization of our model. This is useful when working with features that may be redundant.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-3">
+                <div class="u-container-layout u-container-layout-3">
+                    <h3 class="u-text u-text-6 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">Validation Methods and Metrics Employed</h3>
+                    <ul class="u-text u-text-7">
+                        <li>In terms of validation methods, we have used the technique of splitting data into training and testing. This involves dividing our data set into two parts: one part is used to train the model (training set) and the other part is used to evaluate the performance of the trained model (test set).</li>
+                        <code>x_train, x_test,y_train, y_test = train_test_split(X,Y, test_size=.2, random_state=10)</code>
+                        <li>We normalized the numerical data using Min-Max Scaling to scale it to the range [0, 1], which is a common practice to make sure that all features have the same weight during model training.</li>
+                        <pre>
+                          # creating normalization object
+                          norm = MinMaxScaler()
+                          # fit data
+                          norm_fit = norm.fit(x_train)
+                          x_train = norm_fit.transform(x_train)
+                          x_test = norm_fit.transform(x_test)
+                        </pre>
+                        <li>A binarization process was performed on the 'quality' variable of the dataset so that the expected data would not be so dispersed and thus expect one prediction option or another. This was done by taking the values of this variable and if they were greater than or equal to 7, the quality was categorized as "good", otherwise as "bad".</li>
+                        <code>Y =  df['quality'].apply(lambda y_value: 1 if y_value >= 7 else 0)</code>
+                        <li>Our model obtained an accuracy score of <strong>86.25%</strong>, which shows that it is very reliable.</li>
+                        <!-- <img src="static\images\im3.png" alt="Imagen 2"> -->
+                        <code>lr.score(x_test, y_test)</code>
+                        <li>We show a table comparing the predicted results with the actual results.</li>
+                        <pre>                                            
+                            y_predict = list(lr.predict(x_test))
+                            predicted_df = {'predicted_values': y_predict, 'original_values': y_test}
+                            predicted_df = pd.DataFrame(predicted_df)
+                            predicted_df
+                          </pre>
+                        <div style="display: flex; justify-content: center;">
+                          <img src="static\images\im2.png" alt="Imagen 2">
+                        </div>
+                        <li>To verify the above, we checked which of these results were equal to the expected ones to verify the percentage of accuracy, obtaining that out <strong>of 320 expected results</strong>, <strong>276 accurates predictions</strong>.</li>
+                          <code>
+                            count_equal_values = (predicted_df['predicted_values'] == predicted_df['original_values']).sum()
+                          </code>                    
+                        <!-- <img src="static\images\im4.png" alt="Imagen 2"> -->
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-4">
+                <div class="u-container-layout u-container-layout-4">
+                    <h3 class="u-text u-text-8 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">Preliminary Conclusions</h3>
+                    <ul class="u-text u-text-9">
+                        <li>The logistic regression model has exhibited notably satisfactory performance, yielding a score of 0.8625. This result suggests the model's capability to account for a considerable proportion of variability in wine quality.</li>
+                        <li>According to the correlation matrix, it is observed that the variables "alcohol," "volatile acidity," and "sulphates" exhibit significant correlations with the target variable, wine quality. These variables play a crucial role in predicting wine quality, and therefore, their inclusion in the predictive model is suggested to be responsible for optimal model performance.</li>
+                        <li>A cross-validation strategy with an 80-20 split has been implemented to evaluate the model's generalization ability. Results indicate the model's adequacy in generalizing to new data, implying minimal risk of significant overfitting.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 </body>
 
 </html>
