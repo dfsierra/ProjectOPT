@@ -381,8 +381,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
   <section class="u-clearfix u-section-12" id="sec-8a3b">
     <div class="u-clearfix u-sheet u-sheet-1">
       <h2 class="u-text u-text-1 u-text-center"
-        style="font-family: 'Roboto', sans-serif; color: #602234; text-align: center;">MACHINE LEARNING MODEL SELECTION
-        I</h2>
+        style="font-family: 'Roboto', sans-serif; color: #602234; text-align: center;">MACHINE LEARNING MODEL SELECTION</h2>
       <div class="u-layout u-layout-horizontal u-layout-wrap u-layout-1">
         <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
           <div class="u-container-layout u-container-layout-1">
@@ -414,32 +413,10 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </ul>
           </div>
         </div>
-        <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-          <div class="u-container-layout u-container-layout-2">
-            <h3 class="u-text u-text-4 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">Details
-              About Our First Selected Model</h3>
-            <div style="display: flex; justify-content: center;">
-              <img src="static\images\im1.png" alt="Imagen 2">
-            </div>
-            <ul class="u-text u-text-5">
-              <li>Logistic Regression coefficients are easily interpretable, allowing you to understand how each
-                characteristic contributes to the classification of wine quality as "good" or "bad". This provides
-                valuable insights into which characteristics are most important in determining wine quality.</li>
-              <li>In terms of complexity, Logistic Regression is computationally efficient and can handle large data
-                sets quickly and efficiently. This is beneficial when working with a large number of observations and
-                characteristics.</li>
-              <li>Since we have binarized the wine quality variable to convert the problem into a binary (good/bad)
-                classification, Logistic Regression is a natural choice for this type of problem.</li>
-              <li>Logistic Regression can use regularization techniques, such as L1 (Lasso) or L2 (Ridge)
-                regularization, to avoid overfitting and improve the generalization of our model. This is useful when
-                working with features that may be redundant.</li>
-            </ul>
-          </div>
-        </div>
         <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-3">
           <div class="u-container-layout u-container-layout-3">
             <h3 class="u-text u-text-6 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">Data
-              preprocessing</h3>
+              Preprocessing</h3>
             <ul class="u-text u-text-7">
               <li>We choose all columns of the dataframe except our output variable "Quality" as inputs to our model.
               </li>
@@ -459,16 +436,37 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </ul>
           </div>
         </div>
-
+        <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+          <div class="u-container-layout u-container-layout-2">
+            <h3 class="u-text u-text-4 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">First Model Selected: Logistic Regression</h3>
+            <p>Logistic regression is a statistical method used for binary classification tasks, where the goal is to predict the probability that an instance belongs 
+              to a particular class. It's called "logistic" regression because it uses the logistic function to model the relationship 
+              between the independent variables (features) and the dependent variable (the binary outcome).</p>
+            <div style="display: flex; justify-content: center;">
+              <img src="static\images\im1.png" alt="Imagen 2">
+            </div>
+            <ul class="u-text u-text-5">
+              <li>Logistic Regression coefficients are easily interpretable, allowing you to understand how each
+                characteristic contributes to the classification of wine quality as "good" or "bad". This provides
+                valuable insights into which characteristics are most important in determining wine quality.</li>
+              <li>In terms of complexity, Logistic Regression is computationally efficient and can handle large data
+                sets quickly and efficiently. This is beneficial when working with a large number of observations and
+                characteristics.</li>
+              <li>Since we have binarized the wine quality variable to convert the problem into a binary (good/bad)
+                classification, Logistic Regression is a natural choice for this type of problem.</li>
+              <li>Logistic Regression can use regularization techniques, such as L1 (Lasso) or L2 (Ridge)
+                regularization, to avoid overfitting and improve the generalization of our model. This is useful when
+                working with features that may be redundant.</li>
+            </ul>
+          </div>
+        </div>
         <!--Model trainig and validation section-->
         <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-4">
           <div class="u-container-layout u-container-layout-4">
-            <h3 class="u-text u-text-8 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">Model
-              trainig and validation</h3>
+            <h4 class="u-text u-text-8 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">Model training and validation</h4>
             <ul class="u-text u-text-9">
               <li>We fit the model with the training data.</li>
               <code>lr = LogisticRegression()</code>
-              <p></p>
               <code>lr.fit(x_train, y_train)</code>
               <br></br>
 
@@ -528,15 +526,14 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </ul>
           </div>
         </div>
+
         <!--Using cross validation section-->
         <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-5">
           <div class="u-container-layout u-container-layout-5">
-            <h3 class="u-text u-text-10 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">Using
-              cross validation</h3>
+            <h4 class="u-text u-text-10 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">Cross validation</h4>
             <p>Metrics obtained from a single dataset in a machine learning model may not be indicative of its real-world
             performance on unseen data. This is because the model might have overfit or learned specific features of
             that particular dataset, leading to biased evaluation.</p>
-
             <p>Cross-validation is a crucial technique that addresses this issue by splitting the dataset into multiple
             partitions and performing multiple iterations of training and evaluation. This allows us to assess the
             model's performance on different subsets of data and calculate more robust and generalizable evaluation
@@ -584,7 +581,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-4">
           <div class="u-container-layout u-container-layout-4">
             <h3 class="u-text u-text-8 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">
-              Preliminary Conclusions</h3>
+              Preliminary conclusions on the first model</h3>
             <ul class="u-text u-text-9">
               <li>The logistic regression model has exhibited notably satisfactory performance, yielding a score of
                 <strong>88%</strong>. This result suggests the model's capability to account for a considerable proportion of
@@ -599,6 +596,130 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 <li>Recall (around 25): Recall measures the proportion of correctly predicted "good" instances among all actual "good" instances. A recall of 25 means that the model is able to correctly identify about 25% of all actual "good" instances. This suggests that the model is not capturing all "good" instances, indicating room for improvement.</li>
                 <li>In conclusion, while the model's F1 score is high, indicating a good overall performance, the relatively low recall suggests that the model is missing some "good" instances. Depending on the specific requirements of your application, you may need to consider whether this level of performance is acceptable or if further optimization is necessary.</li>
             </ul>
+          </div>
+        </div>
+        <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+          <div class="u-container-layout u-container-layout-2">
+            <h3 class="u-text u-text-4 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">Second Model Selected: Multi-layer Perceptron classifier.</h3>
+            A Multi-layer Perceptron (MLP) classifier is a type of artificial neural network (ANN) that consists of multiple layers of interconnected neurons (or nodes). It is a powerful model capable of learning complex patterns in data and is commonly used for classification tasks.
+            <br></br>
+            <div style="display: flex; justify-content: center;">
+              <img src="static\images\multilayerperceptron_network.png" alt="Imagen 2">
+            </div>
+            <ul class="u-text u-text-5">
+              <li>Because of its ability to learn nonlinear representations of data, the MLP can model complex relationships between input features and output labels. This makes it suitable for a wide range of machine learning problems.</li>
+              <li>In terms of complexity, MLPs can handle large and complex datasets due to their ability to learn hierarchical
+                representations of features. Though training may be more computationally intensive than logistic regression, 
+                advances in hardware and algorithms have improved their efficiency.</li>
+              <li>The MLP can learn complex patterns in data, making it useful for problems where the relationships between input features and output labels are not obvious or are highly interconnected.</li>
+              <li>In summary, the MLP offers flexibility and capability to handle complex datasets, though its interpretation may be more challenging than logistic regression.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-4">
+          <div class="u-container-layout u-container-layout-4">
+            <h4 class="u-text u-text-8 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">Model
+              training</h4>
+            <ul class="u-text u-text-9">
+              <li>We fit the model with the training data.</li>
+              <code>mlp_ = MLPClassifier(hidden_layer_sizes=(10, 10, 10, 10, 10), activation='identity', alpha=0.5,)</code>
+              <br></br>
+              <code>lr.fit(x_train, y_train)</code>
+              <br></br>
+              <li>Our model has 5 hidden layers with 10 neurons each, with an activation function 'identity' and an alpha of 0.5.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!--Using cross validation section-->
+        <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-5">
+          <div class="u-container-layout u-container-layout-5">
+            <h4 class="u-text u-text-10 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">
+              Cross validation</h4>
+
+            <pre>
+            <code>
+            mlp_accuracy=[]
+            mlp_precision = []
+            mlp_f1 = []
+            mlp_recall = []
+            for k in range(1000):
+              df_train, df_test = train_test_split(df, test_size=0.3, random_state=k+1)
+              mlp_ = MLPClassifier(hidden_layer_sizes=(10, 10, 10, 10, 10), activation='identity', alpha=0.5,)
+              mlp_.fit(df_train[mlp_inputs], df_train[mlp_output])
+              y_pred = mlp_.predict(df_test[mlp_inputs])
+
+              acc = me.accuracy_score(df_test[mlp_output], y_pred)
+              mlp_accuracy.append(acc)
+
+              precision = precision_score(df_test[mlp_output], y_pred, pos_label='Good')
+              mlp_precision.append(precision)
+
+
+              recall = recall_score(df_test[mlp_output], y_pred, pos_label='Good')
+              mlp_recall.append(recall)
+
+
+              f1 = f1_score(df_test[mlp_output], y_pred, pos_label='Good')
+              mlp_f1.append(f1)
+            </code>
+            </pre >
+            <ul class="u-text u-text-11">
+              <li>In this case we will do 1000 iterations. In each iteration we will make a different partition for the training and test data of our model. We will do this by changing the <code>random_state</code> to the iteration number we are in.</li>
+              <li>We will save the score, precision, recall and f1 score of each iteration and then we will see their distributions.</li>
+              <li><strong>Accuracy</strong></li>
+              <code>sns.kdeplot(mlp_accuracy,fill=True)</code>
+              <div style="display: flex; justify-content: center;">
+                <img src="static\images\mlpacc.png" alt="Imagen 2">
+              </div>
+              <br/>
+              <li><strong>Precison</strong></li>
+              <code>sns.kdeplot(mlp_precision,fill=True)</code>
+              <div style="display: flex; justify-content: center;">
+                <img src="static\images\mlpprec.png" alt="Imagen 2">
+              </div>
+              <br/>
+              <li><strong>Recall</strong></li>
+              <code>sns.kdeplot(mlp_recall,fill=True)</code>
+              <div style="display: flex; justify-content: center;">
+                <img src="static\images\mlprecall.png" alt="Imagen 2">
+              </div>
+              <br/>
+              <li><strong>F1 Score</strong></li>
+              <code>sns.kdeplot(mlp_f1,fill=True)</code>
+              <div style="display: flex; justify-content: center;">
+                <img src="static\images\mlpf1.png" alt="Imagen 2">
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-4">
+          <div class="u-container-layout u-container-layout-4">
+            <h3 class="u-text u-text-8 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">
+              Preliminary conclusions on the second model</h3>
+              <p>The analysis of the machine learning model's performance metrics for wine quality prediction reveals significant findings and potential areas for improvement.</p>
+            <ul class="u-text u-text-9">
+              <li>The model's accuracy, with a mean close to <strong>87%</strong> and low dispersion, indicates a consistent overall performance. However, high accuracy should not be interpreted as an indication of optimal performance in all facets of classification.</li>
+              <li>The model's precision, although moderate with a main peak around <strong>60%</strong>, suggests a tendency to misclassify a considerable number of "Bad" quality wines as "Good". This phenomenon, known as false positives, can impact confidence in the model's predictions.
+                The model's Recall, with a pronounced peak near <strong>0%</strong>, indicates that the model has significant difficulties in correctly identifying all "Good" quality wines. This high rate of false negatives can have negative consequences if the accurate identification of these wines is important.
+                </li>
+                <li>Finally, the F1-score, a metric that combines precision and recall, exhibits a bimodal shape, suggesting that the model's performance in terms of the balance between precision and recall is not uniform and could be influenced by various factors. The bimodal shape and dispersion suggest the need for further analysis and optimization of the model to achieve a better balance between precision and recall.</li>   
+            </ul>
+          </div>
+        </div>
+        <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-4">
+          <div class="u-container-layout u-container-layout-4">
+            <h3 class="u-text u-text-8 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">
+              Comparison between both models</h3>
+              <p>Comparing the Logistic Regression model with the second one based on MLP Neural Networks, we can appreciate that for the first one showed a lower dispersion and more marked trends in its metrics, observing in most of them normal distributions with a clear mode and in general, where the greater number of data is grouped the results are higher, while in the second one we can observe a greater dispersion and in metrics such as the F1 score even results in a bimodal distribution.
+              </p>
+              <p>For both models the Precision is very similar around 0.6, and the Sensitivity or Recall is low, but the peak in the second model is at 0.0 but due to its dispersion it is observed that this peak is not very far from the rest of the values keeping grouped a large number of records between 0. 0 and 0.3, while in the first model it is around 0.25, now associating both metrics we can understand that the F1 score is low for both cases since Precision and Recall are also low, suggesting that the model has difficulty identifying the true good wines.
+              </p>
+              <p>Comparing the Logistic Regression model with the second one based on MLP Neural Networks, we can appreciate that the first one showed less dispersion and more marked trends in its metrics, observing in most of them normal distributions with a clear mode, and in general, where the greater number of data is grouped, the results are higher, while in the second one a greater dispersion is observed and in metrics such as the F1 score it is even a bimodal distribution. 
+              </p>
+              <p>For both models, the Accuracy is very similar, around 0.6, and the Sensitivity or Recall is low, but the peak in the second model is at 0.0. However, due to its dispersion, it is observed that this peak is not far from the rest of the values, with a large number of records grouped between 0.0 and 0.3, while in the first model it is around 0.25. Now, associating both metrics, we can understand that the F1 score is low for both cases because Precision and Recall are also low, suggesting that the model has difficulties in identifying really good wines.
+              </p>
           </div>
         </div>
       </div>
