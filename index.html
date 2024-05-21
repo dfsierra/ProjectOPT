@@ -639,11 +639,11 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
               training</h4>
             <ul class="u-text u-text-9">
               <li>We fit the model with the training data.</li>
-              <code>mlp_ = MLPClassifier(hidden_layer_sizes=(10, 10, 10, 10, 10), activation='tanh', alpha=0.5,)</code>
+              <code>mlp_ = MLPClassifier(hidden_layer_sizes=(10, 10, 10, 10, 10), activation='relu', alpha=0.5,)</code>
               <br></br>
               <code>lr.fit(x_train, y_train)</code>
               <br></br>
-              <li>Our model has 5 hidden layers with 10 neurons each, with an activation function 'tanh' and an alpha of 0.5.</li>
+              <li>Our model has 5 hidden layers with 10 neurons each, with an activation function 'relu' and an alpha of 0.5.</li>
               <div style="display: flex; justify-content: center;">
                 <img src="static\images\red_neuronal.png" alt="Imagen 2">
               </div>
@@ -668,7 +668,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
               mlp_recallB = []  # Lista para guardar el recall para vinos malos en cada iteración
               for k in range(1000):
                 df_train, df_test = train_test_split(df, test_size=0.3, random_state=k+1)
-                mlp_ = MLPClassifier(hidden_layer_sizes=(10, 10, 10, 10, 10), activation='tanh', alpha=0.5,)
+                mlp_ = MLPClassifier(hidden_layer_sizes=(10, 10, 10, 10, 10), activation='relu', alpha=0.5,)
                 mlp_.fit(df_train[mlp_inputs], df_train[mlp_output])
                 y_pred = mlp_.predict(df_test[mlp_inputs])
               
