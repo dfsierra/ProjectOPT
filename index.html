@@ -740,10 +740,13 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
           <div class="u-container-layout u-container-layout-4">
             <h3 class="u-text u-text-8 u-text-center" style="font-family: 'Roboto', sans-serif; color: #602234;">
               Comparison between both models</h3>
-              <p>Comparing the Logistic Regression model with the second one based on MLP Neural Networks, we can appreciate that the first one showed less dispersion and more marked trends in its metrics, observing in most of them normal distributions with a clear mode, and in general, where the greater number of data is grouped, the results are higher, while in the second one a greater dispersion is observed and in metrics such as the F1 score it is even a bimodal distribution. 
-              </p>
-              <p>For both models, the Accuracy is very similar, around 0.6, and the Sensitivity or Recall is low, but the peak in the second model is at 0. However, due to its dispersion, it is observed that this peak is not far from the rest of the values, with a large number of records grouped between 0.0 and 0.3, while in the first model it is around 0.25. Now, associating both metrics, we can understand that the F1 score is low for both cases because Precision and Recall are also low, suggesting that the model has difficulties in identifying really good wines.
-              </p>
+              <p>Both models perform moderately well in classifying wine quality. Logistic regression is efficient and easy to interpret, while MLP is more suitable for capturing complex relationships in the data. </p>
+              <p>Still, for our pointwise dataset, we can state that the logistic regression model is the best and most suitable for the following reasons:</p>
+              <ul class="u-text u-text-9">
+                <li>MLP may have higher variability in its performance due to its complexity and sensitivity to hyperparameters and network architecture as this is better recommended to capture complex patterns. This is why the results obtained by the logistic regression model are slightly higher than MLP in terms of score, recall and f1score.
+                </li>
+                <li>Logistic regression is more efficient and faster to train, ideal for simple problems, while MLP, although more computationally expensive, offers better performance in problems with complex relationships.</li>   
+              </ul>
           </div>
         </div>
       </div>
